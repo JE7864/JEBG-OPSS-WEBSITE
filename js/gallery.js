@@ -1,0 +1,1 @@
+document.querySelectorAll('img[data-src]').forEach(img=>{const a=img.closest('a'),missing=a.parentElement.querySelector('.missing');img.addEventListener('load',()=>{a.hidden=false;missing.hidden=true;});img.addEventListener('error',()=>{a.hidden=true;missing.hidden=false;});img.src=img.dataset.src;});
